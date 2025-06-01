@@ -1,15 +1,40 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Array numbers = new Array(2);
+        numbers.insert(33);
+        numbers.printArray();
+        numbers.insert(45);
+        numbers.printArray();
+        numbers.insert(78);
+        numbers.printArray();
+        numbers.insert(11);
+        numbers.printArray();
+        numbers.insert(895);
+        numbers.printArray();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        System.out.println("\nShowing indexof");
+        System.out.println(numbers.indexOf(45));
+
+        System.out.println("\nNow we are removing items");
+        numbers.removeAt(0);
+        numbers.printArray();
+        numbers.removeAt(0);
+        numbers.printArray();
+        numbers.removeAt(0);
+        numbers.printArray();
+        numbers.removeAt(4);
+        numbers.printArray();
+        numbers.removeAt(3);
+        numbers.printArray();
+        numbers.removeAt(2);
+        numbers.printArray();
+        numbers.removeAt(1);
+        numbers.printArray();
+        numbers.removeAt(0);
+        numbers.printArray();
+
+
     }
 }
