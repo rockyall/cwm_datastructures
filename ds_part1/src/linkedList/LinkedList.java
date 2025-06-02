@@ -96,9 +96,10 @@ public class LinkedList {
         if(IsEmpty()) return -1;
 
         var counter = 0;
-        while (first != null){
-            if(first.value == item) return counter;
-            first = first.next;
+        var current  = first;
+        while (current != null){
+            if(current.value == item) return counter;
+            current = current.next;
             counter++;
         }
 
@@ -123,6 +124,20 @@ public class LinkedList {
         return count;
     }
 
+    public int[] toArray(){
+        var resp = new int[count];
+
+        var counter = 0;
+        var current = first;
+        while(current != null){
+            resp[counter] = current.value;
+            current = current.next;
+            counter++;
+        }
+
+        return resp;
+    }
+
     // addFirst
     // addLast
     // deleteFirst
@@ -130,4 +145,5 @@ public class LinkedList {
     // contains
     // indexOf
     // size
+    // toArray
 }
