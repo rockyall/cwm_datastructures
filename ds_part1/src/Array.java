@@ -68,7 +68,9 @@ public class Array {
 
     public void printArray()
     {
-        System.out.println(Arrays.toString(array));
+        for(int i = 0; i < pointer; i++){
+            System.out.println(array[i]);
+        }
     }
 
 

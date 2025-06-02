@@ -1,17 +1,14 @@
 import java.util.Arrays;
+import java.util.LinkedList;
 
 public class Main {
     public static void main(String[] args) {
+        LinkedListExercise();
+    }
+
+    public static void ArrayExcercie(){
         Array numbers = new Array(2);
         numbers.insert(33);
-        numbers.printArray();
-        numbers.insert(45);
-        numbers.printArray();
-        numbers.insert(78);
-        numbers.printArray();
-        numbers.insert(11);
-        numbers.printArray();
-        numbers.insert(895);
         numbers.printArray();
 
         System.out.println("\nShowing indexof");
@@ -20,21 +17,30 @@ public class Main {
         System.out.println("\nNow we are removing items");
         numbers.removeAt(0);
         numbers.printArray();
-        numbers.removeAt(0);
-        numbers.printArray();
-        numbers.removeAt(0);
-        numbers.printArray();
-        numbers.removeAt(4);
-        numbers.printArray();
-        numbers.removeAt(3);
-        numbers.printArray();
-        numbers.removeAt(2);
-        numbers.printArray();
-        numbers.removeAt(1);
-        numbers.printArray();
-        numbers.removeAt(0);
-        numbers.printArray();
+    }
 
+    public static void LinkedListExerciseBuilt(){
+        LinkedList list = new LinkedList();
+        list.addLast(10);
+        list.addLast(20);
+        list.addLast(30);
 
+        System.out.println(list);
+        System.out.println(list.indexOf(10));
+        System.out.println(list.size());
+        var array = list.toArray();
+        System.out.println(Arrays.toString(array));
+        System.out.println(list.contains(10));
+    }
+
+    public static void LinkedListExercise(){
+        linkedList.LinkedList list = new linkedList.LinkedList();
+        list.addLast(10);
+        list.addLast(40);
+        list.addFirst(20);
+        list.addFirst(37);
+        list.printList();
+        System.out.println(list.contains(20));
+        System.out.println(list.indexOf(10));
     }
 }
