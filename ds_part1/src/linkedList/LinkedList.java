@@ -119,10 +119,15 @@ public class LinkedList {
         return false;
     }
 
+    public int size(){
+        return count;
+    }
+
     // addFirst
     // addLast
     // deleteFirst
     // deleteLast
     // contains
     // indexOf
+    // size
 }
