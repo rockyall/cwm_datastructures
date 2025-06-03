@@ -1,9 +1,11 @@
 import java.util.Arrays;
 import java.util.LinkedList;
+import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
-        LinkedListExercise();
+//        LinkedListExercise();
+        StacksExcercise();
     }
 
     public static void ArrayExcercie(){
@@ -55,5 +57,23 @@ public class Main {
         System.out.println(list.hasLoop());
     }
 
+
+    public static void StacksExcercise(){
+        String str = "abcd";
+        System.out.println(str);
+        var strArr = str.toCharArray();
+        Stack<Character> sta = new Stack<Character>();
+        for (int i = 0; i < strArr.length; i++){
+            sta.push(strArr[i]);
+        }
+
+        var reversed = new StringBuilder();
+        for (int i = 0; i < strArr.length; i++){
+            var letter = sta.pop();
+            reversed.append(letter);
+        }
+
+        System.out.println(reversed);
+    }
 
 }
