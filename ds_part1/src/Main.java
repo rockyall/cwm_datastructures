@@ -22,10 +22,12 @@ public class Main {
     public static void LinkedListExerciseBuilt(){
         LinkedList list = new LinkedList();
         list.addLast(10);
-        list.addLast(20);
-        list.addLast(30);
+        list.addLast(40);
+        list.addLast(450);
+        list.addFirst(20);
+        list.addFirst(37);
+        list.addFirst(58);
 
-        System.out.println(list);
         System.out.println(list.indexOf(10));
         System.out.println(list.size());
         var array = list.toArray();
@@ -37,13 +39,21 @@ public class Main {
         linkedList.LinkedList list = new linkedList.LinkedList();
         list.addLast(10);
         list.addLast(40);
+        list.addLast(450);
         list.addFirst(20);
         list.addFirst(37);
-        list.printList();
-        System.out.println(list.contains(20));
-        System.out.println(list.indexOf(10));
-        System.out.println(list.size());
+        list.addFirst(58);
+//        System.out.println(list.contains(20));
+//        System.out.println(list.indexOf(10));
+//        System.out.println(list.size());
+//        var array = list.toArray();
+//        System.out.println(Arrays.toString(array));
+
         var array = list.toArray();
         System.out.println(Arrays.toString(array));
+        System.out.println(list.kthNode(3));
+        System.out.println(list.hasLoop());
     }
+
+
 }
