@@ -114,12 +114,8 @@ public class Main {
         stackList.Stack stackArr = new stackList.Stack(1);
         stackArr.push(10);
         stackArr.push(50);
-        stackArr.push(25);
-        stackArr.push(12);
         stackArr.push(5);
         stackArr.push(59);
-        stackArr.push(33);
-        stackArr.push(48);
         stackArr.printStack();
         System.out.println("\nMethods");
         System.out.println(stackArr.pop());

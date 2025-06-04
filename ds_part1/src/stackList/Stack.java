@@ -1,5 +1,7 @@
 package stackList;
 
+import java.util.Arrays;
+
 public class Stack {
     private int[] stackArray;
     private int count;
@@ -43,7 +45,8 @@ public class Stack {
     }
 
     public void printStack(){
-        for(var item : stackArray){
+        var content = Arrays.copyOfRange(stackArray, 0, count);
+        for(var item : content){
             System.out.println(item);
         }
     }
