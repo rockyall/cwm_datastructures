@@ -6,7 +6,8 @@ public class Main {
     public static void main(String[] args) {
 //        LinkedListExercise();
 //        StacksExcercise();
-        StacksExcercise2();
+//        StacksExcercise2();
+        StackExcersie3();
     }
 
     public static void ArrayExcercie(){
@@ -87,15 +88,15 @@ public class Main {
         arrays[2][1] = '>';
 
         Stack<Character> stack = new Stack<Character>();
-        String str = "(([1] + 02)))[a]";
-        for(char item : str.toCharArray()){
+        String str = "(([1] + (2)))[a]";
+        for(char item : str.toCharArray()){ // time complexity O(2n)
             for(int i = 0; i < arrays.length; i++){
                 if(arrays[i][0] == item){
                     stack.push(item);
                 }
                 if(arrays[i][1] == item){
                     if(stack.isEmpty()){
-                        System.out.println("Caracter not founded '" + item + "'");
+                        System.out.println("Is not balanced '" + item + "'");
                         return;
                     }
                     var previousCar = stack.peek();
@@ -106,7 +107,28 @@ public class Main {
             }
         }
 
-        System.out.println("String validaton: " +stack.isEmpty());
+        System.out.println("Is string balanced: " + stack.isEmpty());
     }
+
+    public static void StackExcersie3(){
+        stackList.Stack stackArr = new stackList.Stack(1);
+        stackArr.push(10);
+        stackArr.push(50);
+        stackArr.push(25);
+        stackArr.push(12);
+        stackArr.push(5);
+        stackArr.push(59);
+        stackArr.push(33);
+        stackArr.push(48);
+        stackArr.printStack();
+        System.out.println("\nMethods");
+        System.out.println(stackArr.pop());
+        System.out.println(stackArr.peek());
+        System.out.println(stackArr.isEmpty());
+    }
+
+
+
+
 
 }
