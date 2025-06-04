@@ -1,13 +1,12 @@
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Stack;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
 //        LinkedListExercise();
 //        StacksExcercise();
 //        StacksExcercise2();
-        StackExcersie3();
+//        StackExcersie3();
+        queueExcercise();
     }
 
     public static void ArrayExcercie(){
@@ -123,8 +122,28 @@ public class Main {
         System.out.println(stackArr.isEmpty());
     }
 
+    public static void queueExcercise(){
+        Queue<Integer> queue = new ArrayDeque<>();
+        queue.add(20);
+        queue.add(35);
+        queue.add(15);
+        queue.add(78);
+        System.out.println(Arrays.toString(queue.toArray()));
+        queueReverse(queue);
+        System.out.println(Arrays.toString(queue.toArray()));
+    }
 
+    public static void queueReverse(Queue<Integer> queue){
+        var arrayStack = new Stack<Integer>();
+        while(!queue.isEmpty()){
+            var removedItem = queue.remove();
+            arrayStack.push(removedItem);
+        }
 
-
-
+        while(!arrayStack.isEmpty()){
+            var topItem = arrayStack.pop();
+            queue.add(topItem);
+        }
+        //Only allow add, remove, isEmpty
+    }
 }
