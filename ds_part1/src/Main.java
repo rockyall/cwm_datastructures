@@ -5,7 +5,8 @@ import java.util.Stack;
 public class Main {
     public static void main(String[] args) {
 //        LinkedListExercise();
-        StacksExcercise();
+//        StacksExcercise();
+        StacksExcercise2();
     }
 
     public static void ArrayExcercie(){
@@ -74,6 +75,38 @@ public class Main {
         }
 
         System.out.println(reversed);
+    }
+
+    public static void StacksExcercise2(){
+        var arrays = new char[3][2];
+        arrays[0][0] = '(';
+        arrays[0][1] = ')';
+        arrays[1][0] = '[';
+        arrays[1][1] = ']';
+        arrays[2][0] = '<';
+        arrays[2][1] = '>';
+
+        Stack<Character> stack = new Stack<Character>();
+        String str = "(([1] + 02)))[a]";
+        for(char item : str.toCharArray()){
+            for(int i = 0; i < arrays.length; i++){
+                if(arrays[i][0] == item){
+                    stack.push(item);
+                }
+                if(arrays[i][1] == item){
+                    if(stack.isEmpty()){
+                        System.out.println("Caracter not founded '" + item + "'");
+                        return;
+                    }
+                    var previousCar = stack.peek();
+                    if(arrays[i][0] == previousCar){
+                        stack.pop();
+                    }
+                }
+            }
+        }
+
+        System.out.println("String validaton: " +stack.isEmpty());
     }
 
 }
