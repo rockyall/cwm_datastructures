@@ -1,5 +1,6 @@
 import dsPart1.Array;
 import dsPart1.queuesList.ArrayQueue;
+import dsPart1.queuesList.StackQueue;
 
 import java.util.*;
 
@@ -152,40 +153,25 @@ public class Main {
     }
 
     public static void queueExcercise2(){
-//        System.out.println(3 % 5);
-//        System.out.println(4 % 5);
-//        System.out.println(5 % 5);
-//        System.out.println(6 % 5);
-//        System.out.println(7 % 5);
-//        System.out.println(8 % 5);
-//        System.out.println(9 % 5);
-//        System.out.println(10 % 5);
-//        for(int i = 1; i <20; i++){
-//            System.out.println(length % i);
-//        }
-//        System.out.println("\n");
+//        ArrayQueue queue = new ArrayQueue(6);
+//        queue.enqueue(77);
+//        queue.enqueue(82);
 
-        ArrayQueue queue = new ArrayQueue(6);
-        queue.enqueue(77);
-        queue.enqueue(82);
-        queue.enqueue(32);
+        StackQueue queue = new StackQueue(4);
+        queue.enqueue(20);
+        queue.enqueue(30);
+        queue.enqueue(40);
+        queue.enqueue(50);
+        queue.dequeue();
+        queue.enqueue(20);
+        queue.enqueue(55);
         queue.dequeue();
         queue.dequeue();
-        queue.enqueue(12);
-        queue.enqueue(3);
-        queue.enqueue(56);
-        queue.enqueue(35);
-        queue.dequeue();
-        queue.enqueue(64);
-        queue.enqueue(164);
-        queue.dequeue();
-        queue.dequeue();
-        queue.enqueue(49);
-//        queue.enqueue(45);
+
         queue.println();
         System.out.println("\npeek");
-        System.out.println("first in and out: " + queue.peek());
-        System.out.println("Is full: " + queue.isFull());
+        System.out.println("first : " + queue.peek());
+//        System.out.println("Is full: " + queue.isFull());
 
     }
 }

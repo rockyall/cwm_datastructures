@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Stack {
     private int[] stackArray;
-    private int count;
+    public int count;
 
     public Stack(int length){
         count = 0;
@@ -12,7 +12,6 @@ public class Stack {
     }
 
     public void push(int item){
-        //[0,0,0,0] -> [0,0,0,1] -> [0,0,2,1] -> [0,3,2,1]
         if(isFull()){
             var newarray = new int[count * 2];
             for(int i = 0; i < count; i++){
@@ -24,9 +23,9 @@ public class Stack {
     }
 
     public int pop(){
-        var lastElement = stackArray[count - 1];
-        stackArray[count - 1] = 0;
-        count--;
+        if(isEmpty()) return -1;
+        var lastElement = stackArray[--count];
+        stackArray[count] = 0;
         return lastElement;
     }
 
@@ -36,7 +35,7 @@ public class Stack {
     }
 
     public Boolean isFull() {
-        if(stackArray.length == count) return true;
+        if(count == stackArray.length) return true;
         return false;
     }
 
@@ -49,6 +48,10 @@ public class Stack {
         for(var item : content){
             System.out.println(item);
         }
+    }
+
+    public int[] getStack(){
+        return Arrays.copyOfRange(stackArray, 0, count);
     }
 
     //push
