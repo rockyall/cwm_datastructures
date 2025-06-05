@@ -52,7 +52,6 @@ public class ArrayQueue {
             return;
         }
         System.out.println(Arrays.toString(queue));
-//        System.out.println(counter % queue.length);
     }
 
     //enqueue
