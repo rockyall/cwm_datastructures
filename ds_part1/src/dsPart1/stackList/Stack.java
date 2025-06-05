@@ -1,4 +1,4 @@
-package stackList;
+package dsPart1.stackList;
 
 import java.util.Arrays;
 

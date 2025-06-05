@@ -1,4 +1,4 @@
-package linkedList;
+package dsPart1.linkedList;
 
 public class LinkedList {
     private Node first;

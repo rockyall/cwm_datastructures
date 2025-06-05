@@ -1,4 +1,4 @@
-import java.util.Arrays;
+package dsPart1;
 
 public class Array {
     int[] array;

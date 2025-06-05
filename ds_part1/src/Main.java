@@ -1,4 +1,5 @@
-import queuesList.ArrayQueue;
+import dsPart1.Array;
+import dsPart1.queuesList.ArrayQueue;
 
 import java.util.*;
 
@@ -42,7 +43,7 @@ public class Main {
     }
 
     public static void LinkedListExercise(){
-        linkedList.LinkedList list = new linkedList.LinkedList();
+        dsPart1.linkedList.LinkedList list = new dsPart1.linkedList.LinkedList();
         list.addLast(10);
         list.addLast(40);
         list.addLast(450);
@@ -113,7 +114,7 @@ public class Main {
     }
 
     public static void StackExcersie3(){
-        stackList.Stack stackArr = new stackList.Stack(1);
+        dsPart1.stackList.Stack stackArr = new dsPart1.stackList.Stack(1);
         stackArr.push(10);
         stackArr.push(50);
         stackArr.push(5);

@@ -1,4 +1,4 @@
-package queuesList;
+package dsPart1.queuesList;
 
 import java.util.Arrays;
 
