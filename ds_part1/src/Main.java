@@ -1,5 +1,6 @@
 import dsPart1.Array;
 import dsPart1.queuesList.ArrayQueue;
+import dsPart1.queuesList.PriorityQueue;
 import dsPart1.queuesList.Stack2Queue;
 import dsPart1.queuesList.StackQueue;
 
@@ -12,7 +13,8 @@ public class Main {
 //        StacksExcercise2();
 //        StackExcersie3();
 //        queueExcercise();
-        queueExcercise2();
+//        queueExcercise2();
+        queueExcercise3();
     }
 
     public static void ArrayExcercie(){
@@ -171,6 +173,19 @@ public class Main {
         System.out.println("\npeek");
         System.out.println("first : " + queue.peek());
 //        System.out.println("Is full: " + queue.isFull());
+
+    }
+
+    public static void queueExcercise3(){
+        PriorityQueue pq = new PriorityQueue(5);
+        pq.add(5);
+        pq.add(10);
+        pq.add(20);
+        pq.add(1);
+        pq.add(30);
+        pq.add(40);
+        pq.remove();
+        pq.printlnarray();
 
     }
 }
