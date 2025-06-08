@@ -1,5 +1,6 @@
 import dsPart1.Array;
 import dsPart1.queuesList.ArrayQueue;
+import dsPart1.queuesList.Stack2Queue;
 import dsPart1.queuesList.StackQueue;
 
 import java.util.*;
@@ -157,15 +158,13 @@ public class Main {
 //        queue.enqueue(77);
 //        queue.enqueue(82);
 
-        StackQueue queue = new StackQueue(4);
+        Stack2Queue queue = new Stack2Queue(4);
         queue.enqueue(20);
         queue.enqueue(30);
         queue.enqueue(40);
         queue.enqueue(50);
         queue.dequeue();
-        queue.enqueue(20);
-        queue.enqueue(55);
-        queue.dequeue();
+        queue.enqueue(60);
         queue.dequeue();
 
         queue.println();
