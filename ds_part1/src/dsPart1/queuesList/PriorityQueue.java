@@ -9,9 +9,6 @@ public class PriorityQueue {
     public PriorityQueue(int length){
         list = new int[length];
     }
-    //item = 15
-    //[10, 20, 20, 30]
-    //  0
 
     public void add(int item){
         if(isFull()) resize();
