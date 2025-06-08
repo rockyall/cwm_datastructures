@@ -186,6 +186,7 @@ public class Main {
         pq.add(40);
         pq.remove();
         pq.printlnarray();
+        System.out.println(pq.peek());
 
     }
 }

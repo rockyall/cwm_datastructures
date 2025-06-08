@@ -30,6 +30,10 @@ public class PriorityQueue {
     public int remove(){
         return list[--count];
     }
+
+    public int peek(){
+        return list[count - 1];
+    }
     
     public void resize(){
         var newList = new int[list.length + 1];
