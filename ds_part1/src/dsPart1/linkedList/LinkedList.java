@@ -38,12 +38,12 @@ public class LinkedList {
         count++;
     }
 
-    public void addFirst(int item){
+    public int addFirst(int item){
         if(IsEmpty()){
             first = new Node(item, null);
             last = first;
             count++;
-            return;
+            return first.value;
         }
 
         var newNode = new Node(item, null);
@@ -51,19 +51,21 @@ public class LinkedList {
 
         first = newNode;
         count++;
+        return first.value;
     }
 
-    public void deleteFirst(){
-        if(IsEmpty()) return;
+    public int deleteFirst(){
+        if(IsEmpty()) return 0;
         if(first == last){
             first = null;
             last = first;
             count--;
-            return;
+            return first.value;
         }
 
         first = first.next;
         count--;
+        return first.value;
     }
 
     public void deleteLast(){

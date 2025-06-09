@@ -12,7 +12,8 @@ public class Main {
 //        StackExcersie3();
 //        queueExcercise();
 //        queueExcercise2();
-        queueExcercise3();
+//        queueExcercise3();
+        queueExcercise4();
     }
 
     public static void ArrayExcercie(){
@@ -191,5 +192,18 @@ public class Main {
 
     }
 
-
+    public static void queueExcercise4(){
+        LinkedListQueue llq = new LinkedListQueue();
+        llq.enqueue(10);
+        llq.enqueue(20);
+        llq.enqueue(30);
+        llq.dequeue();
+        llq.enqueue(40);
+        llq.dequeue();
+        llq.println();
+        System.out.println();
+        System.out.println(llq.peek());
+        System.out.println(llq.size());
+        System.out.println(llq.isEmpty());
+    }
 }
