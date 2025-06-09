@@ -7,9 +7,11 @@ public class ArrayQueue {
     private int front;
     private int rear;
     private int counter;
+    public int length;
 
     public ArrayQueue(int _length){
-        queue = new int[_length];
+        length = _length;
+        queue = new int[length];
         front = 0;
         rear = 0;
         counter = 0;

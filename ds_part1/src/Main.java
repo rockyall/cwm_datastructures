@@ -13,7 +13,8 @@ public class Main {
 //        queueExcercise();
 //        queueExcercise2();
 //        queueExcercise3();
-        queueExcercise4();
+//        queueExcercise4();
+        queueExcerise5();
     }
 
     public static void ArrayExcercie(){
@@ -205,5 +206,18 @@ public class Main {
         System.out.println(llq.peek());
         System.out.println(llq.size());
         System.out.println(llq.isEmpty());
+    }
+
+    public static void queueExcerise5(){
+        StackWithTwoQueues stq = new StackWithTwoQueues(7);
+        stq.push(10);
+        stq.push(20);
+        stq.push(30);
+        stq.push(40);
+        stq.push(50);
+        stq.println();
+        System.out.println(stq.pop());
+        System.out.println(stq.peek());
+        stq.println();
     }
 }
