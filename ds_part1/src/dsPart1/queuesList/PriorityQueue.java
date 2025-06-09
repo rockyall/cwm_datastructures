@@ -12,6 +12,24 @@ public class PriorityQueue {
 
     public void add(int item){
         if(isFull()) resize();
+        var index = shiftItemsToInsert(item);
+        list[index] = item;
+        count++;
+    }
+
+
+
+    public int remove(){
+        if(isEmpty()) return -1;
+        return list[--count];
+    }
+
+    public int peek(){
+        if(isEmpty()) return  -1;
+        return list[count - 1];
+    }
+
+    public int shiftItemsToInsert(int item){
         int i;
         for(i = count - 1; i >= 0; i--){
             if(list[i] > item){
@@ -20,18 +38,9 @@ public class PriorityQueue {
                 break;
             }
         }
-        list[i + 1] = item;
-        count++;
+        return i + 1;
     }
 
-    public int remove(){
-        return list[--count];
-    }
-
-    public int peek(){
-        return list[count - 1];
-    }
-    
     public void resize(){
         var newList = new int[list.length + 1];
         for(int i = 0; i< list.length; i++){
@@ -73,13 +82,17 @@ public class PriorityQueue {
         return count == 0;
     }
 
+    public int[] toArray(){
+        return Arrays.copyOfRange(list, 0, count);
+    }
+
     public void println(){
-        var newList = Arrays.copyOfRange(list, 0, count);
+        var newList = toArray();
         System.out.println(Arrays.toString(newList));
     }
 
     public void printlnarray(){
-        var newList = Arrays.copyOfRange(list, 0, count);
+        var newList = toArray();
         System.out.println(Arrays.toString(newList));
     }
 }

@@ -1,8 +1,6 @@
 import dsPart1.Array;
-import dsPart1.queuesList.ArrayQueue;
+import dsPart1.queuesList.*;
 import dsPart1.queuesList.PriorityQueue;
-import dsPart1.queuesList.Stack2Queue;
-import dsPart1.queuesList.StackQueue;
 
 import java.util.*;
 
@@ -178,15 +176,20 @@ public class Main {
 
     public static void queueExcercise3(){
         PriorityQueue pq = new PriorityQueue(5);
-        pq.add(5);
         pq.add(10);
         pq.add(20);
-        pq.add(1);
         pq.add(30);
         pq.add(40);
-        pq.remove();
+        pq.add(50);
         pq.printlnarray();
         System.out.println(pq.peek());
 
+        QueueReverser qr = new QueueReverser();
+        var list = pq.toArray();
+        qr.reverse(list, 2);
+        System.out.println(Arrays.toString(list));
+
     }
+
+
 }
