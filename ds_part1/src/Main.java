@@ -14,7 +14,8 @@ public class Main {
 //        queueExcercise2();
 //        queueExcercise3();
 //        queueExcercise4();
-        queueExcerise5();
+//        queueExcerise5();
+        hasTableExercise();
     }
 
     public static void ArrayExcercie(){
@@ -219,5 +220,26 @@ public class Main {
         System.out.println(stq.pop());
         System.out.println(stq.peek());
         stq.println();
+    }
+
+    public static void hasTableExercise(){
+        // Key -> Employee Number (Integer)
+        // Value -> Name (String)
+
+        Map<Integer, String> map = new HashMap<>();
+        map.put(1, "Mosh");
+        map.put(2, "Josh");
+        map.put(3, "Mary");
+        map.containsKey(3); //o(1)
+        map.containsValue("Mosh"); //o(n)
+
+        System.out.println(map);
+
+        for (var item : map.entrySet()){
+            System.out.println(item);
+        }
+
+        //a green apple
+
     }
 }
